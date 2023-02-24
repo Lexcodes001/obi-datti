@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+@keyframes heart-beat {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+:root{
+    --header: #fff;
+    --txt: #eee;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 150vh;
+    max-height: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(images/bg1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    transition: all 1s ease-in-out;
+}
+
+.box{
+    width: 30rem;
+    max-height: max-content;
+    padding: .5rem 1.3rem .5rem;
+    margin: 1.5rem;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-items: center;
+    align-content: center;
+    background-color: rgba(0, 0, 0, .3);
+    backdrop-filter: blur(2px);
+    transition: border-radius .1s ease;
+}
+
+.box:hover{
+    border-radius: .8rem;
+    backdrop-filter: blur(7px);
+}
+
+.about h1{
+    color: var(--header);
+}
+
+.about p{
+    color: var(--txt);
+    font-size: .7rem;
+    padding: 0;
+    margin: .5rem;
+}
+
+.p11{
+  position: absolute;
+  left: 35px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 2rem  !important;
+  animation: heart-beat 1s ease-in 1s infinite;
+}
+
+.p12{
+  font-size: .5rem  !important;
+  font-style: italic;
+  font-weight: 500;
+  text-align: right;
+}
+
+.p13{
+  letter-spacing: .1rem;
+  padding-bottom: 0;
+  margin: 3rem auto 0  !important;
+  font-size: .4rem  !important;
+  font-family: monospace;
+  text-align: center;
+  font-weight: 500;
+  color: rgba(255, 255, 255, .5)  !important;
+}
+
+@media only screen and (min-width: 768px) {
+  body{
+    height: 100vh;
+  }
+
+  .box{
+    width: fit-content;
+  }
+  
+  .about p{
+    font-size: .7rem;
+  }
+
+  .p12{
+    font-size: .6rem  !important;
+  }
+  
+  .p13{
+    font-size: .4rem  !important;
+  }
+}
